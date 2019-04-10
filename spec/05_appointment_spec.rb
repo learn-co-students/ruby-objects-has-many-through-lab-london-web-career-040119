@@ -6,9 +6,9 @@ describe "Appointment" do
     it "knows about all appointments that have been created" do
       doctor_who = Doctor.new("The Doctor")
       hevydevy = Patient.new("Devin Townsend")
-      doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
-      appointment = doctor_who.new_appointment(hevydevy, "Caturday, January Purrty2nd")
-      doctor_who.new_appointment(hevydevy, "Satunday, January 34nd")
+      doctor_who.new_appointment("Friday, January 32nd", hevydevy)
+      appointment = doctor_who.new_appointment("Caturday, January Purrty2nd", hevydevy)
+      doctor_who.new_appointment("Satunday, January 34nd", hevydevy)
 
       expect(Appointment.all).to include(appointment)
     end
